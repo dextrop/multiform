@@ -1,6 +1,15 @@
 # jsMultiform
 Animated Multiform library
 
+Getting started
+===============
+
+Include Js and Css
+```html
+    <link rel="stylesheet" href="multiform.css">
+    <script src="multiform-min.js"></script>
+``` 
+
 Init Library
 ============
 
