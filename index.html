@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="src/multiform.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        :root {
+
+            --color-one: #454d66;
+            --color-two: #009975;
+            --color-three: #58b368;
+            --color-four: #d9d872;
+            --color-five: #f7f9ff;
+        }
+
+        body {
+            background: var(--color-one);
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .multipart-sec {
+            background: var(--color-five);
+            /*height: 400px;*/
+            width: 40%;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            top: 10%;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            border-radius: 5px;
+            padding: 50px;
+        }
+
+        .pull-right {
+            float: right;
+        }
+
+        .btn {
+            margin-right: 10px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<section id="multiform-js">
+    <section class="multipart-sec">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary pull-right" onclick="jsMultiform.nextSection()">Next</button>
+    </section>
+    <section class="multipart-sec">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter Full Name">
+            <small id="nameHelp" class="form-text text-muted">eg. John Cater</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Age</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary pull-right" onclick="jsMultiform.nextSection()">Next</button>
+        <button type="submit" class="btn btn-success pull-right" onclick="jsMultiform.previousSection()">Previous</button>
+    </section>
+    <section class="multipart-sec">
+        <div class="form-group">
+            <label for="exampleFormControlFile1">Profile Picture</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Location</label>
+            <input type="text" class="form-control" id="location" aria-describedby="emailHelp" placeholder="Enter Location">
+            <small id="locationHelp" class="form-text text-muted">Current Location</small>
+        </div>
+        <button type="submit" class="btn btn-primary pull-right" onclick="jsMultiform.nextSection()">Next</button>
+        <button type="submit" class="btn btn-success pull-right" onclick="jsMultiform.previousSection()">Previous</button>
+    </section>
+    <section class="multipart-sec">
+        <div class="form-group">
+            <label for="exampleFormControlFile1">About Me</label>
+            <textarea class="form-control" rows="5"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success pull-right" onclick="jsMultiform.previousSection()">Previous</button>
+    </section>
+</section>
+<script src="src/multiform.js"></script>
+<script>
+    jsMultiform.init(
+        {
+            "time": .5
+        }
+    )
+</script>
+</body>
+</html>

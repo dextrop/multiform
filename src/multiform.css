@@ -1,0 +1,136 @@
+:root {
+    --slide-animation-time: 1s;
+}
+
+
+
+
+
+#multiform-js {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.inactive {
+    display: none;
+}
+
+.hide_to_left {
+    -webkit-animation: hide_to_left var(--slide-animation-time) forwards; /* Safari 4.0 - 8.0 */
+    animation: hide_to_left var(--slide-animation-time) forwards;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes hide_to_left {
+    from {
+        left: 50%;
+        opacity: 1;
+    }
+    to {
+        left: 0;
+        opacity: 0;
+    }
+}
+
+/* Standard syntax */
+@keyframes hide_to_left {
+    from {
+        left: 50%;
+        opacity: 1;
+    }
+    to {
+        left: 0;
+        opacity: 0;
+    }
+}
+
+.hide_to_right {
+    -webkit-animation: hide_to_right var(--slide-animation-time) forwards; /* Safari 4.0 - 8.0 */
+    animation: hide_to_right var(--slide-animation-time) forwards;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes hide_to_right {
+    from {
+        left: 50%;
+        opacity: 1;
+    }
+    to {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+/* Standard syntax */
+@keyframes hide_to_right {
+    from {
+        left: 50%;
+        opacity: 1;
+    }
+    to {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+.show_from_left {
+    -webkit-animation: show_from_left var(--slide-animation-time) forwards; /* Safari 4.0 - 8.0 */
+    animation: show_from_left var(--slide-animation-time) forwards;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes show_from_left {
+    from {
+        left: 100%;
+        opacity: 0;
+    }
+    to {
+        left: 50%;
+        opacity: 1;
+    }
+}
+
+/* Standard syntax */
+@keyframes show_from_left {
+    from {
+        left: 100%;
+        opacity: 0;
+    }
+    to {
+        left: 50%;
+        opacity: 1;
+    }
+}
+
+.show_from_right {
+    -webkit-animation: show_from_right var(--slide-animation-time) forwards; /* Safari 4.0 - 8.0 */
+    animation: show_from_right var(--slide-animation-time) forwards;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes show_from_right {
+    from {
+        left: 0;
+        opacity: 0;
+    }
+    to {
+        left: 50%;
+        opacity: 1;
+    }
+}
+
+/* Standard syntax */
+@keyframes show_from_right {
+    from {
+        left: 0;
+        opacity: 0;
+    }
+    to {
+        left: 50%;
+        opacity: 1;
+    }
+}
+
